@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kepler Property Group | Premium Residential Construction Melbourne & Mornington Peninsula</title>
+  <meta name="description" content="Kepler Property Group delivers high-end residential construction and development across Melbourne and the Mornington Peninsula. Custom homes, renovations, extensions, and project management." />
+  <meta property="og:title" content="Kepler Property Group | Premium Residential Construction" />
+  <meta property="og:description" content="High-end residential construction and development across Melbourne & the Mornington Peninsula. Custom homes, renovations, extensions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://keplerpropertygroup.com.au" />
+  <link rel="canonical" href="https://keplerpropertygroup.com.au" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Kepler Property Group",
+    "url": "https://keplerpropertygroup.com.au",
+    "telephone": "0448524451",
+    "email": "andy@keplerpropertygroup.com.au",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "VIC",
+      "addressLocality": "Melbourne & Mornington Peninsula",
+      "addressCountry": "AU"
+    },
+    "description": "High-end residential construction and development across Melbourne and the Mornington Peninsula.",
+    "areaServed": ["Melbourne", "Mornington Peninsula"]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #111111;
+      --charcoal: #1A1A1A;
+      --charcoal-light: #242424;
+      --gold: #D4B483;
+      --gold-light: #DFC49A;
+      --off-white: #F5F2EE;
+      --muted: #A8A49E;
+      --font-heading: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--charcoal);
+      color: var(--off-white);
+      font-family: var(--font-body);
+      font-weight: 300;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── SCROLLBAR ─── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 28px 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.4s ease, padding 0.4s ease;
+    }
+
+    nav.scrolled {
+      background: var(--black);
+      padding: 18px 64px;
+    }
+
+    .nav-logo {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--gold);
+      letter-spacing: 0.15em;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .nav-logo-icon {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 40px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--off-white);
+      text-decoration: none;
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 26px;
+      height: 1px;
+      background: var(--off-white);
+      transition: all 0.3s ease;
+    }
+
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+    /* Mobile overlay */
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      z-index: 99;
+      background: var(--black);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .mobile-menu.open { opacity: 1; pointer-events: all; }
+
+    .mobile-menu a {
+      font-family: var(--font-heading);
+      font-size: 36px;
+      font-weight: 300;
+      color: var(--off-white);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      transition: color 0.2s;
+    }
+
+    .mobile-menu a:hover { color: var(--gold); }
+
+    /* ─── HERO ─── */
+    #hero {
+      min-height: 100vh;
+      background: url('/Front.png') center center / cover no-repeat;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg, rgba(10,9,8,0.32) 0%, rgba(20,18,16,0.25) 100%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 140px 64px 100px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .hero-text h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(44px, 5.5vw, 76px);
+      font-weight: 300;
+      line-height: 1.1;
+      color: #ffffff;
+      margin-bottom: 28px;
+      letter-spacing: -0.01em;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.9), 0 4px 32px rgba(0,0,0,0.85);
+    }
+
+    .hero-text p {
+      text-shadow: 0 1px 6px rgba(0,0,0,0.95), 0 2px 16px rgba(0,0,0,0.9);
+    }
+
+    .hero-text h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero-text p {
+      font-size: 16px;
+      font-weight: 300;
+      color: #ffffff;
+      line-height: 1.75;
+      max-width: 440px;
+      margin-bottom: 40px;
+    }
+
+    .hero-divider {
+      width: 60px;
+      height: 1px;
+      background: var(--gold);
+      margin-bottom: 32px;
+    }
+
+    /* ─── FORM ─── */
+    .hero-form-wrap {
+      background: rgba(17,17,17,0.7);
+      border: 1px solid rgba(184,148,106,0.2);
+      padding: 48px 44px;
+    }
+
+    .form-heading {
+      font-family: var(--font-heading);
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--gold);
+      letter-spacing: 0.06em;
+      margin-bottom: 32px;
+    }
+
+    .form-row { margin-bottom: 18px; }
+
+    .form-row label {
+      display: block;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #A8A49E;
+      margin-bottom: 7px;
+    }
+
+    .form-row input,
+    .form-row select,
+    .form-row textarea {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(184,148,106,0.35);
+      padding: 10px 0;
+      color: var(--off-white);
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 300;
+      outline: none;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+      border-radius: 0;
+    }
+
+    .form-row select {
+      cursor: pointer;
+      background: var(--charcoal);
+      padding: 10px 8px;
+    }
+
+    .form-row select option { background: var(--charcoal); color: var(--off-white); }
+
+    .form-row input:focus,
+    .form-row select:focus,
+    .form-row textarea:focus {
+      border-bottom-color: var(--gold);
+    }
+
+    .form-row textarea { resize: vertical; min-height: 90px; }
+
+    .btn-gold {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--black);
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      padding: 15px 36px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      width: 100%;
+      margin-top: 8px;
+    }
+
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 32px 0;
+    }
+
+    .form-success .success-icon {
+      font-size: 32px;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    .form-success p {
+      font-family: var(--font-heading);
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--off-white);
+    }
+
+    .form-success span {
+      display: block;
+      font-size: 13px;
+      color: #A8A49E;
+      margin-top: 8px;
+    }
+
+    /* ─── TRUST BAR ─── */
+    #trust {
+      background: var(--black);
+      padding: 0;
+      border-top: 1px solid var(--gold);
+      border-bottom: 1px solid var(--gold);
+    }
+
+    .trust-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .trust-item {
+      flex: 1;
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #D8D4CE;
+    }
+
+    .trust-divider {
+      width: 1px;
+      height: 36px;
+      background: var(--gold);
+      opacity: 0.4;
+      flex-shrink: 0;
+    }
+
+    /* ─── SECTION SHARED ─── */
+    section { padding: 120px 0; }
+
+    .section-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 64px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .section-heading {
+      font-family: var(--font-heading);
+      font-size: clamp(36px, 4vw, 56px);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--off-white);
+      margin-bottom: 16px;
+    }
+
+    .section-rule {
+      width: 48px;
+      height: 1px;
+      background: var(--gold);
+      margin-bottom: 56px;
+    }
+
+    /* ─── SERVICES ─── */
+    #services { background: var(--charcoal); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+
+    .service-card {
+      background: var(--charcoal-light);
+      padding: 44px 36px;
+      border-top: 2px solid var(--gold);
+      transition: transform 0.25s ease, background 0.25s ease;
+      position: relative;
+    }
+
+    .service-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: rgba(184,148,106,0.08);
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      background: #282420;
+    }
+
+    .service-num {
+      font-family: var(--font-heading);
+      font-size: 48px;
+      font-weight: 300;
+      color: rgba(184,148,106,0.15);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .service-title {
+      font-family: var(--font-heading);
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--gold);
+      margin-bottom: 14px;
+      letter-spacing: 0.02em;
+    }
+
+    .service-desc {
+      font-size: 14px;
+      font-weight: 300;
+      color: #C8C4BE;
+      line-height: 1.75;
+    }
+
+    /* ─── ABOUT ─── */
+    #about { background: var(--black); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-image {
+      aspect-ratio: 4/5;
+      background: #0F0D0B;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-image img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .about-image::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(184,148,106,0.06) 0%, transparent 50%);
+    }
+
+    .about-image-inner {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about-image-inner svg {
+      width: 80px;
+      height: 80px;
+      opacity: 0.12;
+    }
+
+    .about-text p {
+      font-size: 15px;
+      font-weight: 300;
+      color: #C8C4BE;
+      line-height: 1.85;
+      margin-bottom: 48px;
+    }
+
+    .about-features { list-style: none; display: flex; flex-direction: column; gap: 20px; }
+
+    .about-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      font-size: 14px;
+      font-weight: 300;
+      color: #E0DDD8;
+      letter-spacing: 0.04em;
+    }
+
+    .about-features li .feat-icon {
+      color: var(--gold);
+      font-size: 16px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ─── PROJECTS ─── */
+    #projects { background: var(--charcoal); }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
+      margin-bottom: 32px;
+    }
+
+    .project-tile {
+      aspect-ratio: 4/3;
+      background: linear-gradient(160deg, #1E1C19 0%, #141210 100%);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .project-tile:nth-child(1) { aspect-ratio: 4/5; grid-row: span 2; }
+    .project-tile:nth-child(4) { aspect-ratio: 4/5; grid-row: span 2; }
+
+    .project-tile::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .project-tile:hover::before { opacity: 1; }
+
+    .project-tile-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .project-tile:hover .project-tile-overlay { opacity: 1; }
+
+    .project-tile-overlay span {
+      font-family: var(--font-heading);
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--off-white);
+      background: rgba(184,148,106,0.85);
+      padding: 10px 24px;
+    }
+
+    /* Placeholder gradient variations */
+    .project-tile:nth-child(5) { background: linear-gradient(140deg, #1D1B18 0%, #131110 100%); }
+    .project-tile:nth-child(6) { background: linear-gradient(170deg, #1B1917 0%, #121110 100%); }
+
+    .project-tile-inner {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .project-tile-inner svg { opacity: 0.07; width: 56px; height: 56px; }
+
+    .project-tile > img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .projects-note {
+      font-size: 12px;
+      font-weight: 300;
+      color: #A8A49E;
+      letter-spacing: 0.06em;
+      text-align: center;
+    }
+
+    /* ─── LIGHTBOX ─── */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: rgba(0,0,0,0.95);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+
+    .lightbox.open { opacity: 1; pointer-events: all; }
+
+    .lightbox-content {
+      position: relative;
+      max-width: 90vw;
+      max-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-img {
+      width: min(900px, 90vw);
+      max-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0a0908;
+    }
+
+    .lightbox-img img {
+      max-width: 100%;
+      max-height: 85vh;
+      object-fit: contain;
+      display: block;
+    }
+
+    .lightbox-close {
+      position: fixed;
+      top: 32px; right: 40px;
+      background: none;
+      border: none;
+      color: var(--off-white);
+      font-size: 28px;
+      cursor: pointer;
+      transition: color 0.2s;
+      line-height: 1;
+      font-weight: 300;
+    }
+
+    .lightbox-close:hover { color: var(--gold); }
+
+    .lightbox-nav {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: 1px solid rgba(184,148,106,0.3);
+      color: var(--off-white);
+      width: 48px; height: 48px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      font-size: 20px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .lightbox-nav:hover { border-color: var(--gold); color: var(--gold); }
+    .lightbox-prev { left: 24px; }
+    .lightbox-next { right: 24px; }
+
+    /* ─── CONTACT ─── */
+    #contact { background: var(--black); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .contact-details { padding-top: 8px; }
+
+    .contact-details p {
+      font-size: 14px;
+      font-weight: 300;
+      color: #C8C4BE;
+      line-height: 1.8;
+      margin-bottom: 40px;
+    }
+
+    .contact-info-list { list-style: none; display: flex; flex-direction: column; gap: 24px; }
+
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .contact-info-icon {
+      color: var(--gold);
+      font-size: 15px;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .contact-info-text {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--off-white);
+      line-height: 1.6;
+    }
+
+    .contact-info-text a {
+      color: var(--off-white);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .contact-info-text a:hover { color: var(--gold); }
+
+    .contact-info-label {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #A8A49E;
+      margin-bottom: 4px;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--black);
+      border-top: 1px solid var(--gold);
+      padding: 56px 0 32px;
+    }
+
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 64px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+      margin-bottom: 48px;
+    }
+
+    .footer-logo {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--gold);
+      letter-spacing: 0.15em;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-logo-icon { width: 36px; height: 36px; object-fit: contain; }
+
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .footer-nav a {
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #C0BBB4;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-nav a:hover { color: var(--gold); }
+
+    .footer-credit {
+      text-align: right;
+      font-size: 11px;
+      font-weight: 300;
+      color: #9E9A94;
+    }
+
+    .footer-credit a {
+      color: #9E9A94;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-credit a:hover { color: var(--gold); }
+
+    .footer-bottom {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 24px 64px 0;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      text-align: center;
+      font-size: 11px;
+      font-weight: 300;
+      color: #8C8880;
+      letter-spacing: 0.08em;
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 1024px) {
+      nav { padding: 24px 40px; }
+      nav.scrolled { padding: 16px 40px; }
+      .hero-inner { padding: 120px 40px 80px; gap: 48px; }
+      .section-inner { padding: 0 40px; }
+      .trust-inner { padding: 0 40px; }
+      .footer-inner { padding: 0 40px; }
+      .footer-bottom { padding: 24px 40px 0; }
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 20px 24px; }
+      nav.scrolled { padding: 14px 24px; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        padding: 100px 24px 64px;
+        gap: 48px;
+      }
+
+      .hero-text p { max-width: 100%; }
+
+      .trust-inner { padding: 0 24px; flex-direction: column; }
+      .trust-divider { width: 40px; height: 1px; }
+      .trust-item { padding: 20px 0; }
+
+      section { padding: 80px 0; }
+      .section-inner { padding: 0 24px; }
+
+      .services-grid { grid-template-columns: 1fr; gap: 2px; }
+      .about-grid { grid-template-columns: 1fr; gap: 48px; }
+      .about-image { aspect-ratio: 3/2; }
+
+      .projects-grid { grid-template-columns: 1fr 1fr; }
+      .project-tile:nth-child(1) { aspect-ratio: 4/3; grid-row: span 1; }
+      .project-tile:nth-child(4) { aspect-ratio: 4/3; grid-row: span 1; }
+
+      .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+
+      .footer-inner { grid-template-columns: 1fr; gap: 32px; padding: 0 24px; }
+      .footer-nav { justify-content: flex-start; }
+      .footer-credit { text-align: left; }
+      .footer-bottom { padding: 24px 24px 0; }
+
+      .lightbox-nav { display: none; }
+    }
+
+    @media (max-width: 480px) {
+      .projects-grid { grid-template-columns: 1fr; }
+      .hero-form-wrap { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── MOBILE MENU ─── -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#projects" onclick="closeMobileMenu()">Projects</a>
+  <a href="#services" onclick="closeMobileMenu()">Services</a>
+  <a href="#about" onclick="closeMobileMenu()">About</a>
+  <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+</div>
+
+<!-- ─── NAV ─── -->
+<nav id="mainNav">
+  <a href="#" class="nav-logo">
+    <img class="nav-logo-icon" src="/kpg_top_middle_tile copy.jpg" alt="Kepler Property Group" />
+    KEPLER PROPERTY GROUP
+  </a>
+  <ul class="nav-links">
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-divider"></div>
+      <h1>Your Vision.<br><em>Our Craft. Built to Last.</em></h1>
+      <p>High-end residential construction and development across Melbourne & the Mornington Peninsula.</p>
+      <p style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:0;">Scroll to explore</p>
+    </div>
+
+    <div class="hero-form-wrap">
+      <p class="form-heading">Request a Free Quote</p>
+
+      <div class="form-success" id="heroSuccess">
+        <span class="success-icon">✦</span>
+        <p>Thank you for reaching out.</p>
+        <span>We'll be in touch within one business day.</span>
+      </div>
+
+      <form id="heroForm">
+        <input type="hidden" name="access_key" value="6b10df91-90a2-4e5d-b260-cd525fedfc1c" />
+        <input type="hidden" name="subject" value="New Quote Request - Kepler Property Group" />
+        <div class="form-row">
+          <label for="hero-name">Full Name</label>
+          <input type="text" id="hero-name" name="name" required placeholder="Your name" />
+        </div>
+        <div class="form-row">
+          <label for="hero-phone">Phone</label>
+          <input type="tel" id="hero-phone" name="phone" required placeholder="Your phone number" />
+        </div>
+        <div class="form-row">
+          <label for="hero-email">Email</label>
+          <input type="email" id="hero-email" name="email" required placeholder="Your email address" />
+        </div>
+        <div class="form-row">
+          <label for="hero-type">Project Type</label>
+          <select id="hero-type" name="project_type" required>
+            <option value="" disabled selected>Select a project type</option>
+            <option value="New Home">New Home</option>
+            <option value="Renovation">Renovation</option>
+            <option value="Extension">Extension</option>
+            <option value="Development">Development</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="hero-message">Message</label>
+          <textarea id="hero-message" name="message" placeholder="Tell us about your project..."></textarea>
+        </div>
+        <button type="submit" class="btn-gold" id="heroSubmitBtn">Request a Free Quote</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TRUST BAR ─── -->
+<div id="trust">
+  <div class="trust-inner">
+    <div class="trust-item">Melbourne &amp; Mornington Peninsula</div>
+    <div class="trust-divider"></div>
+    <div class="trust-item">High-End Residential</div>
+    <div class="trust-divider"></div>
+    <div class="trust-item">Free Project Consultations</div>
+  </div>
+</div>
+
+<!-- ─── SERVICES ─── -->
+<section id="services">
+  <div class="section-inner">
+    <p class="section-label">What We Build</p>
+    <h2 class="section-heading">Our Services</h2>
+    <div class="section-rule"></div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <h3 class="service-title">Custom Homes</h3>
+        <p class="service-desc">Architecturally considered new homes built to your vision and your standard.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <h3 class="service-title">Renovations &amp; Extensions</h3>
+        <p class="service-desc">Thoughtful upgrades that elevate your existing home without compromise.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <h3 class="service-title">Residential Development</h3>
+        <p class="service-desc">End-to-end project delivery from concept to completion.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <h3 class="service-title">Civil Contracting</h3>
+        <p class="service-desc">Professional civil works delivered on time and to specification.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">05</div>
+        <h3 class="service-title">Demolition</h3>
+        <p class="service-desc">Safe, efficient demolition of buildings of all sizes.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">06</div>
+        <h3 class="service-title">Site Cuts</h3>
+        <p class="service-desc">Precise earthworks and site preparation for any build.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">07</div>
+        <h3 class="service-title">Driveways</h3>
+        <p class="service-desc">Quality driveway construction and finishing across Melbourne and the Peninsula.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">08</div>
+        <h3 class="service-title">Landscaping</h3>
+        <p class="service-desc">Thoughtful outdoor spaces designed and built to complement every property.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">09</div>
+        <h3 class="service-title">Carpentry &amp; Construction</h3>
+        <p class="service-desc">Hands-on craftsmanship underpins everything we do.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">10</div>
+        <h3 class="service-title">Property Maintenance</h3>
+        <p class="service-desc">Ongoing care for your asset, including acreage services across the Peninsula.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ABOUT ─── -->
+<section id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-image">
+        <img src="/kpg_tile_123.png" alt="Kepler Property Group craftsmanship" />
+      </div>
+
+      <div class="about-text">
+        <p class="section-label">About Us</p>
+        <h2 class="section-heading">A Different Kind<br>of Builder</h2>
+        <div class="section-rule"></div>
+        <p>Kepler Property Group was founded on years of hands-on experience in residential construction, civil works, carpentry, and project management across Melbourne and the Mornington Peninsula. We bring a practical, detail-first approach to every project, combining strong trades knowledge with a genuine focus on design, communication, and client experience.</p>
+        <p>Our goal is simple: deliver homes and developments that are built to a high standard and designed to stand the test of time.</p>
+
+        <ul class="about-features">
+          <li>
+            <span class="feat-icon">✦</span>
+            <span>Hands-On Construction Expertise</span>
+          </li>
+          <li>
+            <span class="feat-icon">✦</span>
+            <span>Reliable Communication Throughout</span>
+          </li>
+          <li>
+            <span class="feat-icon">✦</span>
+            <span>Trusted Trades, Realistic Planning</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PROJECTS ─── -->
+<section id="projects">
+  <div class="section-inner">
+    <p class="section-label">Portfolio</p>
+    <h2 class="section-heading">Our Work</h2>
+    <div class="section-rule"></div>
+
+    <div class="projects-grid" id="projectsGrid">
+      <div class="project-tile" data-index="0">
+        <img src="/Front.png" alt="Kepler Property Group - exterior" />
+        <div class="project-tile-overlay"><span>View Project</span></div>
+      </div>
+      <div class="project-tile" data-index="1">
+        <img src="/image_2.png" alt="Kepler Property Group - project" />
+        <div class="project-tile-overlay"><span>View Project</span></div>
+      </div>
+      <div class="project-tile" data-index="2">
+        <img src="/image_3.png" alt="Kepler Property Group - project" />
+        <div class="project-tile-overlay"><span>View Project</span></div>
+      </div>
+      <div class="project-tile" data-index="3">
+        <img src="/inside.png" alt="Kepler Property Group - interior" />
+        <div class="project-tile-overlay"><span>View Project</span></div>
+      </div>
+      <div class="project-tile" data-index="4">
+        <img src="/inside_2.png" alt="Kepler Property Group - interior" />
+        <div class="project-tile-overlay"><span>View Project</span></div>
+      </div>
+      <div class="project-tile" data-index="5">
+        <img src="/master_bed.png" alt="Kepler Property Group - master bedroom" />
+        <div class="project-tile-overlay"><span>View Project</span></div>
+      </div>
+      <div class="project-tile" data-index="6">
+        <img src="/image.png" alt="Kepler Property Group - living area" />
+        <div class="project-tile-overlay"><span>View Project</span></div>
+      </div>
+    </div>
+
+    <p class="projects-note">Photography from recent residential projects across Melbourne and the Mornington Peninsula.</p>
+  </div>
+</section>
+
+<!-- ─── LIGHTBOX ─── -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">&times;</button>
+  <button class="lightbox-nav lightbox-prev" onclick="lightboxNav(-1)" aria-label="Previous">&#8592;</button>
+  <button class="lightbox-nav lightbox-next" onclick="lightboxNav(1)" aria-label="Next">&#8594;</button>
+  <div class="lightbox-content">
+    <div class="lightbox-img" id="lightboxImg"></div>
+  </div>
+</div>
+
+<!-- ─── CONTACT ─── -->
+<section id="contact">
+  <div class="section-inner">
+    <p class="section-label">Get In Touch</p>
+    <h2 class="section-heading">Start Your Project</h2>
+    <div class="section-rule"></div>
+
+    <div class="contact-grid">
+      <div>
+        <div class="form-success" id="contactSuccess">
+          <span class="success-icon">✦</span>
+          <p>Thank you for reaching out.</p>
+          <span>We'll be in touch within one business day.</span>
+        </div>
+
+        <form id="contactForm">
+          <input type="hidden" name="access_key" value="6b10df91-90a2-4e5d-b260-cd525fedfc1c" />
+          <input type="hidden" name="subject" value="New Enquiry - Kepler Property Group" />
+          <div class="form-row">
+            <label for="c-name">Full Name</label>
+            <input type="text" id="c-name" name="name" required placeholder="Your name" />
+          </div>
+          <div class="form-row">
+            <label for="c-phone">Phone</label>
+            <input type="tel" id="c-phone" name="phone" required placeholder="Your phone number" />
+          </div>
+          <div class="form-row">
+            <label for="c-email">Email</label>
+            <input type="email" id="c-email" name="email" required placeholder="Your email address" />
+          </div>
+          <div class="form-row">
+            <label for="c-type">Project Type</label>
+            <select id="c-type" name="project_type" required>
+              <option value="" disabled selected>Select a project type</option>
+              <option value="New Home">New Home</option>
+              <option value="Renovation">Renovation</option>
+              <option value="Extension">Extension</option>
+              <option value="Development">Development</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="c-message">Message</label>
+            <textarea id="c-message" name="message" placeholder="Tell us about your project..."></textarea>
+          </div>
+          <button type="submit" class="btn-gold" id="contactSubmitBtn">Send Enquiry</button>
+        </form>
+      </div>
+
+      <div class="contact-details">
+        <p>We'd love to hear about your build. Get in touch for a free project consultation - no pressure, no obligation.</p>
+        <ul class="contact-info-list">
+          <li class="contact-info-item">
+            <span class="contact-info-icon">✦</span>
+            <div class="contact-info-text">
+              <span class="contact-info-label">Phone</span>
+              <a href="tel:0448524451">0448 524 451</a>
+            </div>
+          </li>
+          <li class="contact-info-item">
+            <span class="contact-info-icon">✦</span>
+            <div class="contact-info-text">
+              <span class="contact-info-label">Email</span>
+              <a href="mailto:andy@keplerpropertygroup.com.au">andy@keplerpropertygroup.com.au</a>
+            </div>
+          </li>
+          <li class="contact-info-item">
+            <span class="contact-info-icon">✦</span>
+            <div class="contact-info-text">
+              <span class="contact-info-label">Location</span>
+              Melbourne &amp; Mornington Peninsula, VIC
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img class="footer-logo-icon" src="/kpg_top_middle_tile copy.jpg" alt="Kepler Property Group" />
+      KEPLER PROPERTY GROUP
+    </div>
+
+    <ul class="footer-nav">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="footer-credit">
+      Website by <a href="https://www.itscold.com.au" target="_blank" rel="noopener">Go Polar Creative</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Kepler Property Group. All rights reserved.
+  </div>
+</footer>
+
+<script>
+  // ─── NAV SCROLL ───
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  // ─── MOBILE MENU ───
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const btn = document.getElementById('hamburger');
+    menu.classList.toggle('open');
+    btn.classList.toggle('open');
+    document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+  }
+
+  function closeMobileMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // ─── WEB3FORMS ───
+  async function submitForm(formEl, successEl, btnEl) {
+    const originalText = btnEl.textContent;
+    btnEl.textContent = 'Sending...';
+    btnEl.disabled = true;
+
+    const formData = new FormData(formEl);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: json
+      });
+      const data = await res.json();
+      if (data.success) {
+        formEl.style.display = 'none';
+        successEl.style.display = 'block';
+      } else {
+        btnEl.textContent = 'Error - Try Again';
+        btnEl.disabled = false;
+      }
+    } catch {
+      btnEl.textContent = 'Error - Try Again';
+      btnEl.disabled = false;
+    }
+  }
+
+  document.getElementById('heroForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    submitForm(this, document.getElementById('heroSuccess'), document.getElementById('heroSubmitBtn'));
+  });
+
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    submitForm(this, document.getElementById('contactSuccess'), document.getElementById('contactSubmitBtn'));
+  });
+
+  // ─── LIGHTBOX ───
+  const tileImages = [
+    { src: '/Front.png', alt: 'Exterior - Kepler Property Group' },
+    { src: '/image_2.png', alt: 'Project - Kepler Property Group' },
+    { src: '/image_3.png', alt: 'Project - Kepler Property Group' },
+    { src: '/inside.png', alt: 'Interior - Kepler Property Group' },
+    { src: '/inside_2.png', alt: 'Interior - Kepler Property Group' },
+    { src: '/master_bed.png', alt: 'Master Bedroom - Kepler Property Group' },
+    { src: '/image.png', alt: 'Living Area - Kepler Property Group' },
+  ];
+  let currentIndex = 0;
+  const totalTiles = tileImages.length;
+
+  function updateLightboxImage(index) {
+    const imgEl = document.getElementById('lightboxImg');
+    const item = tileImages[index];
+    if (item.src) {
+      imgEl.innerHTML = `<img src="${item.src}" alt="${item.alt}" />`;
+    } else {
+      imgEl.innerHTML = `<svg viewBox="0 0 80 80" fill="none" width="80" height="80"><path d="M5 65 L25 20 L40 45 L55 20 L75 65 Z" stroke="#B8946A" stroke-width="1.5" fill="none"/></svg>`;
+    }
+  }
+
+  document.querySelectorAll('.project-tile').forEach(tile => {
+    tile.addEventListener('click', () => {
+      currentIndex = parseInt(tile.dataset.index);
+      updateLightboxImage(currentIndex);
+      openLightbox(currentIndex);
+    });
+  });
+
+  function openLightbox(index) {
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    currentIndex = index;
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function lightboxNav(dir) {
+    currentIndex = (currentIndex + dir + totalTiles) % totalTiles;
+    updateLightboxImage(currentIndex);
+  }
+
+  document.getElementById('lightbox').addEventListener('click', function(e) {
+    if (e.target === this) closeLightbox();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    const lb = document.getElementById('lightbox');
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') lightboxNav(-1);
+    if (e.key === 'ArrowRight') lightboxNav(1);
+  });
+</script>
+</body>
+</html>
